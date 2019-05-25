@@ -49,7 +49,7 @@ class PBXProjectPlistWriter(NSPlistWriter):
             key1, value1 = item1
             key2, value2 = item2
 
-            return cmp(value1["isa"], value2["isa"])
+            return cmp(value1["isa"], value2["isa"]) or cmp(key1, key2)
 
         sorted_object_items = sorted(object_dict.iteritems(), cmp=compare_object_items)
 
