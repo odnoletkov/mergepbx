@@ -51,7 +51,7 @@ class AbstractPBXBuildPhase(PBXISADictionaryBound):
                 return "(null)"
 
 class PBXCopyFilesBuildPhase(AbstractPBXBuildPhase, PBXISA):
-    pass
+    DEFAULT_NAME = "CopyFiles"
 
 class PBXFrameworksBuildPhase(AbstractPBXBuildPhase, PBXISA):
     DEFAULT_NAME = "Frameworks"
